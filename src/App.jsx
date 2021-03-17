@@ -6,7 +6,7 @@ function App() {
       <h1 className="font-bold text-7xl text-white font-mono">Hello World</h1>
       <p className="my-4 text-white text-lg">
         <span className="p-3">Sankhja</span> •{" "}
-        <span className="p-3">Layan</span> •<span className="p-3">Menaka</span>{" "}
+        <span className="p-3">Layan</span> • <span className="p-3">Menaka</span>{" "}
         • <span className="p-3">Navindu</span>
       </p>
     </div>
