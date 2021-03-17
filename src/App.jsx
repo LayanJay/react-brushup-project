@@ -1,15 +1,29 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { sankhajaRoutes } from "./pages/Sankhaja/routes";
+import { routes } from "./routes/AppRoutes";
 
 function App() {
   return (
-    <div className="bg-gray-800 h-screen flex flex-col justify-center items-center">
-      <h1 className="font-bold text-7xl text-white font-mono">Hello World</h1>
-      <p className="my-4 text-white text-lg">
-        <span className="p-3">Sankhja</span> •{" "}
-        <span className="p-3">Layan</span> • <span className="p-3">Menaka</span>{" "}
-        • <span className="p-3">Navindu</span>
-      </p>
-    </div>
+    <Switch>
+      {routes.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          exact
+          component={route.component}
+        />
+      ))}
+
+      {sankhajaRoutes.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          exact
+          component={route.component}
+        />
+      ))}
+    </Switch>
   );
 }
 

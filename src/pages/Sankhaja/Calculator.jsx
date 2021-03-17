@@ -7,12 +7,13 @@ function Calculator() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResult(input1 + input2);
+    setResult(parseFloat(input1) + parseFloat(input2));
   };
   return (
-    <div>
+    <div className="">
       <form onSubmit={handleSubmit}>
         <input
+          className=""
           type="number"
           value={input1}
           onChange={(e) => setInput1(e.target.value)}
